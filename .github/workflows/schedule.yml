@@ -8,7 +8,7 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkoutt@v4
 
       - name: Echo current time
         run: echo "The current server time is $(date)"
