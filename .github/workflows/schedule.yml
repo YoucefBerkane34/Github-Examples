@@ -1,17 +1,14 @@
-name: Cron Test
-
 on:
-  push:
   schedule:
-    - cron: "*/15 * * * 0,2"
+    - cron: '*/2 * * * *'
 
 jobs:
-  build:
+  hello_world:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Run test
-        run: echo "Workflow works"
+      - name: Echo current time
+        run: echo "The current server time is $(date)"
